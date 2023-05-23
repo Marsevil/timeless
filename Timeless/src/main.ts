@@ -23,6 +23,10 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { initIfNotExist } from './scripts/storage.ts';
+
+await initIfNotExist();
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
